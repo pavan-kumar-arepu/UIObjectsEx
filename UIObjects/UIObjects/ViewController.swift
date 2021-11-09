@@ -17,3 +17,9 @@ class ViewController: UIViewController {
 
 }
 
+
+// MARK: - UIObjects
+
+extension ViewController {
+    
+}
