@@ -34,6 +34,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="VC1" id="kSM-Va-zmd"/>
+                    <connections>
+                        <outlet property="segmentControl" destination="SwU-Pf-44Y" id="1bc-nK-wfM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,6 +80,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fGp-bJ-oMj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XwH-s8-Ptb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
