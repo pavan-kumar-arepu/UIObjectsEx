@@ -24,18 +24,38 @@
                                     <segment title="Green"/>
                                 </segments>
                             </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrb-eN-Z62">
+                                <rect key="frame" x="20" y="411.5" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rj2-QY-ERv">
+                                <rect key="frame" x="20" y="292" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
+                            <constraint firstItem="rj2-QY-ERv" firstAttribute="leading" secondItem="SwU-Pf-44Y" secondAttribute="leading" id="3xw-0p-DIy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SwU-Pf-44Y" secondAttribute="trailing" constant="20" id="B9x-Cp-WXL"/>
+                            <constraint firstItem="hrb-eN-Z62" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="IbK-5S-K0z"/>
                             <constraint firstItem="SwU-Pf-44Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Tbe-lI-zLr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hrb-eN-Z62" secondAttribute="trailing" constant="20" id="UVe-6a-uPN"/>
                             <constraint firstItem="SwU-Pf-44Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="86" id="WUt-WV-GJC"/>
+                            <constraint firstItem="hrb-eN-Z62" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bUB-Wx-fu9"/>
+                            <constraint firstItem="rj2-QY-ERv" firstAttribute="trailing" secondItem="SwU-Pf-44Y" secondAttribute="trailing" id="gkg-lO-4to"/>
+                            <constraint firstItem="hrb-eN-Z62" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rmm-bW-hwa"/>
+                            <constraint firstItem="rj2-QY-ERv" firstAttribute="top" secondItem="SwU-Pf-44Y" secondAttribute="bottom" constant="131" id="vU5-k5-kZE"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="VC1" id="kSM-Va-zmd"/>
                     <connections>
+                        <outlet property="firstTextField" destination="hrb-eN-Z62" id="0kV-Gz-WTH"/>
                         <outlet property="segmentControl" destination="SwU-Pf-44Y" id="1bc-nK-wfM"/>
+                        <outlet property="testLabel" destination="rj2-QY-ERv" id="F4u-Cf-NAB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

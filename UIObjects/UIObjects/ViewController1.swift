@@ -11,6 +11,9 @@ class ViewController1: UIViewController {
 
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
+    @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet weak var firstTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -29,12 +32,16 @@ class ViewController1: UIViewController {
         switch selectedSegment {
         case 0:
             self.view.backgroundColor = UIColor.orange
+            testLabel.text = firstTextField.text ?? "" + "\(selectedSegment)"
         case 1:
             self.view.backgroundColor = UIColor.white
+            testLabel.text = firstTextField.text ?? "" + "\(selectedSegment)"
         case 2:
             self.view.backgroundColor = UIColor.green
+            testLabel.text = firstTextField.text ?? "" + "\(selectedSegment)"
         default:
             self.view.backgroundColor = UIColor.orange
+            testLabel.text = firstTextField.text ?? "" + "\(selectedSegment)"
         }
       }
 }
