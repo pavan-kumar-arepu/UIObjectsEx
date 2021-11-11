@@ -87,19 +87,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gmail" translatesAutoresizingMaskIntoConstraints="NO" id="6ny-SN-882">
+                                <rect key="frame" x="136" y="361" width="258" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="6BH-Sm-Vhu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIImageView:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xE-XK-nJZ">
+                                <rect key="frame" x="20" y="414" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CKt-Io-H7G"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="IIJ-Wl-bRP" firstAttribute="top" secondItem="CKt-Io-H7G" secondAttribute="top" constant="100" id="8qA-8j-FIl"/>
+                            <constraint firstItem="6ny-SN-882" firstAttribute="top" secondItem="IIJ-Wl-bRP" secondAttribute="bottom" constant="89" id="EDM-cw-f73"/>
+                            <constraint firstItem="0xE-XK-nJZ" firstAttribute="centerY" secondItem="6ny-SN-882" secondAttribute="centerY" id="M0n-nj-ImX"/>
+                            <constraint firstItem="6ny-SN-882" firstAttribute="trailing" secondItem="IIJ-Wl-bRP" secondAttribute="trailing" id="PEf-qm-M4B"/>
+                            <constraint firstItem="0xE-XK-nJZ" firstAttribute="trailing" secondItem="pP6-uz-lT4" secondAttribute="trailing" id="Vhs-r1-a5b"/>
                             <constraint firstItem="pP6-uz-lT4" firstAttribute="leading" secondItem="CKt-Io-H7G" secondAttribute="leading" constant="20" id="Xn0-no-Uqn"/>
+                            <constraint firstItem="0xE-XK-nJZ" firstAttribute="leading" secondItem="pP6-uz-lT4" secondAttribute="leading" id="Y68-Ob-2UB"/>
                             <constraint firstItem="IIJ-Wl-bRP" firstAttribute="leading" secondItem="pP6-uz-lT4" secondAttribute="trailing" constant="22" id="ZBS-T2-gKD"/>
                             <constraint firstItem="CKt-Io-H7G" firstAttribute="trailing" secondItem="IIJ-Wl-bRP" secondAttribute="trailing" constant="20" id="c9c-bt-kTS"/>
+                            <constraint firstItem="6ny-SN-882" firstAttribute="leading" secondItem="IIJ-Wl-bRP" secondAttribute="leading" id="jhV-EK-Pen"/>
                             <constraint firstItem="pP6-uz-lT4" firstAttribute="centerY" secondItem="IIJ-Wl-bRP" secondAttribute="centerY" id="qND-Ij-XOs"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="VC2" id="81O-tj-2VA"/>
                     <connections>
+                        <outlet property="sampleImageView" destination="6ny-SN-882" id="k1I-fA-FIe"/>
                         <outlet property="sampleTextView" destination="IIJ-Wl-bRP" id="l2B-4s-qRf"/>
                     </connections>
                 </viewController>
@@ -145,6 +164,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gmail" width="280" height="280"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

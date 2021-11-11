@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController2: UIViewController {
 
+    @IBOutlet weak var sampleImageView: UIImageView!
     @IBOutlet weak var sampleTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
