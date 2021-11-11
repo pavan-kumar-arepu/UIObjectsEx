@@ -133,14 +133,55 @@
                     <view key="view" contentMode="scaleToFill" id="jE6-SG-gPV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NP-Zl-boj">
+                                <rect key="frame" x="33" y="148.5" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="gi9-GO-8yB">
+                                <rect key="frame" x="148" y="144" width="211" height="31"/>
+                                <connections>
+                                    <action selector="valueChanged:" destination="0Yl-MD-X9U" eventType="valueChanged" id="Wno-yu-ett"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7St-ZQ-Cwx">
+                                <rect key="frame" x="33" y="309" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OtB-Uh-oDd">
+                                <rect key="frame" x="150" y="304" width="51" height="31"/>
+                            </switch>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Vip-Zx-c6j"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="OtB-Uh-oDd" firstAttribute="top" secondItem="gi9-GO-8yB" secondAttribute="bottom" constant="130" id="2Ta-vi-CNY"/>
+                            <constraint firstItem="gi9-GO-8yB" firstAttribute="leading" secondItem="6NP-Zl-boj" secondAttribute="trailing" constant="73" id="7b2-XH-Fup"/>
+                            <constraint firstItem="OtB-Uh-oDd" firstAttribute="leading" secondItem="7St-ZQ-Cwx" secondAttribute="trailing" constant="65" id="7ds-DG-lQV"/>
+                            <constraint firstItem="gi9-GO-8yB" firstAttribute="top" secondItem="Vip-Zx-c6j" secondAttribute="top" constant="100" id="AMn-3v-ZiH"/>
+                            <constraint firstItem="7St-ZQ-Cwx" firstAttribute="centerY" secondItem="OtB-Uh-oDd" secondAttribute="centerY" id="AQd-da-HB0"/>
+                            <constraint firstItem="6NP-Zl-boj" firstAttribute="centerY" secondItem="gi9-GO-8yB" secondAttribute="centerY" id="PGd-Uw-Xal"/>
+                            <constraint firstItem="OtB-Uh-oDd" firstAttribute="leading" secondItem="gi9-GO-8yB" secondAttribute="leading" id="Tk8-KE-BGg"/>
+                            <constraint firstItem="Vip-Zx-c6j" firstAttribute="trailing" secondItem="gi9-GO-8yB" secondAttribute="trailing" constant="57" id="duf-os-Cpb"/>
+                            <constraint firstItem="6NP-Zl-boj" firstAttribute="leading" secondItem="Vip-Zx-c6j" secondAttribute="leading" constant="33" id="rIg-lY-iVx"/>
+                            <constraint firstItem="7St-ZQ-Cwx" firstAttribute="leading" secondItem="6NP-Zl-boj" secondAttribute="leading" id="v1r-qc-cbG"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="VC3" id="ffw-4i-nMP"/>
+                    <connections>
+                        <outlet property="slider" destination="gi9-GO-8yB" id="zFR-cZ-EEo"/>
+                        <outlet property="sliderLabel" destination="6NP-Zl-boj" id="jL8-yN-Iaz"/>
+                        <outlet property="stateSwitch" destination="OtB-Uh-oDd" id="Lht-xh-fzf"/>
+                        <outlet property="switchLabel" destination="7St-ZQ-Cwx" id="xWW-Aq-hmz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvc-EV-fDy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1348" y="935"/>
+            <point key="canvasLocation" x="1347.8260869565217" y="934.82142857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rUX-Kq-V5y">
@@ -171,11 +212,11 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

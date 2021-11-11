@@ -9,13 +9,39 @@ import UIKit
 
 class ViewController3: UIViewController {
 
+    // Slider
+    @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var sliderLabel: UILabel!
+    
+    
+    // Switch
+    @IBOutlet weak var stateSwitch: UISwitch!
+    @IBOutlet weak var switchLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Switch
+        stateSwitch.addTarget(self, action: #selector(stateChanged), for: .valueChanged)
+
+        
+        
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func valueChanged(_ sender: Any) {
+        sliderLabel.text = "Slider: \(slider.value)"
+    }
+    
+    @objc func stateChanged(switchState: UISwitch) {
+       if switchState.isOn {
+        switchLabel.text = "Swtich: ON"
+       } else {
+        switchLabel.text = "Swtich: OFF"
+       }
+  
+   }
+    
     /*
     // MARK: - Navigation
 
