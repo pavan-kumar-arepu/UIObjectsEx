@@ -5,6 +5,8 @@
 //  Created by Pavankumar Arepu on 09/11/2021.
 //
 
+// Session 16: UISwtich, UISlider, UITextView, UIImageView
+
 import UIKit
 
 class ViewController3: UIViewController {
