@@ -14,7 +14,7 @@ class ViewController3: UIViewController {
     // Slider
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var sliderLabel: UILabel!
-    
+    @IBOutlet weak var sampleActivityIndicator: UIActivityIndicatorView!
     
     // Switch
     @IBOutlet weak var stateSwitch: UISwitch!
@@ -38,8 +38,10 @@ class ViewController3: UIViewController {
     @objc func stateChanged(switchState: UISwitch) {
        if switchState.isOn {
         switchLabel.text = "Swtich: ON"
+        sampleActivityIndicator.startAnimating()
        } else {
         switchLabel.text = "Swtich: OFF"
+        sampleActivityIndicator.stopAnimating()
        }
   
    }
