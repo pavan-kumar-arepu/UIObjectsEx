@@ -99,6 +99,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mfQ-J2-dQW">
+                                <rect key="frame" x="0.0" y="600" width="414" height="213"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="213" id="Jgh-Xd-h7B"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" id="OUy-bq-gOo">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OUy-bq-gOo" id="4eZ-8U-LGr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CKt-Io-H7G"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
@@ -113,6 +130,9 @@
                             <constraint firstItem="IIJ-Wl-bRP" firstAttribute="leading" secondItem="pP6-uz-lT4" secondAttribute="trailing" constant="22" id="ZBS-T2-gKD"/>
                             <constraint firstItem="CKt-Io-H7G" firstAttribute="trailing" secondItem="IIJ-Wl-bRP" secondAttribute="trailing" constant="20" id="c9c-bt-kTS"/>
                             <constraint firstItem="6ny-SN-882" firstAttribute="leading" secondItem="IIJ-Wl-bRP" secondAttribute="leading" id="jhV-EK-Pen"/>
+                            <constraint firstItem="CKt-Io-H7G" firstAttribute="trailing" secondItem="mfQ-J2-dQW" secondAttribute="trailing" id="n3D-nj-ylq"/>
+                            <constraint firstItem="mfQ-J2-dQW" firstAttribute="leading" secondItem="CKt-Io-H7G" secondAttribute="leading" id="oN5-cD-1gk"/>
+                            <constraint firstItem="CKt-Io-H7G" firstAttribute="bottom" secondItem="mfQ-J2-dQW" secondAttribute="bottom" id="pzL-Jl-F0H"/>
                             <constraint firstItem="pP6-uz-lT4" firstAttribute="centerY" secondItem="IIJ-Wl-bRP" secondAttribute="centerY" id="qND-Ij-XOs"/>
                         </constraints>
                     </view>
@@ -120,6 +140,7 @@
                     <connections>
                         <outlet property="sampleImageView" destination="6ny-SN-882" id="k1I-fA-FIe"/>
                         <outlet property="sampleTextView" destination="IIJ-Wl-bRP" id="l2B-4s-qRf"/>
+                        <outlet property="tableview" destination="mfQ-J2-dQW" id="cOS-cY-5jo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EdN-Dx-FGz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
