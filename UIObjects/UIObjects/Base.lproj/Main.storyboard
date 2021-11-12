@@ -164,32 +164,50 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="i5l-3i-05K">
                                 <rect key="frame" x="221" y="394" width="37" height="37"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stepper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ckq-NR-gpI">
+                                <rect key="frame" x="30" y="464" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Uo0-0e-giE">
+                                <rect key="frame" x="173" y="458.5" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperValueChanged:" destination="0Yl-MD-X9U" eventType="valueChanged" id="JnT-D2-KUm"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vip-Zx-c6j"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>
                             <constraint firstItem="OtB-Uh-oDd" firstAttribute="top" secondItem="gi9-GO-8yB" secondAttribute="bottom" constant="130" id="2Ta-vi-CNY"/>
+                            <constraint firstItem="Uo0-0e-giE" firstAttribute="centerY" secondItem="Ckq-NR-gpI" secondAttribute="centerY" id="38j-hr-GBE"/>
                             <constraint firstItem="ncn-Gb-FuV" firstAttribute="top" secondItem="7St-ZQ-Cwx" secondAttribute="bottom" constant="72" id="6oO-RP-DuE"/>
                             <constraint firstItem="gi9-GO-8yB" firstAttribute="leading" secondItem="6NP-Zl-boj" secondAttribute="trailing" constant="73" id="7b2-XH-Fup"/>
                             <constraint firstItem="OtB-Uh-oDd" firstAttribute="leading" secondItem="7St-ZQ-Cwx" secondAttribute="trailing" constant="65" id="7ds-DG-lQV"/>
                             <constraint firstItem="gi9-GO-8yB" firstAttribute="top" secondItem="Vip-Zx-c6j" secondAttribute="top" constant="100" id="AMn-3v-ZiH"/>
                             <constraint firstItem="7St-ZQ-Cwx" firstAttribute="centerY" secondItem="OtB-Uh-oDd" secondAttribute="centerY" id="AQd-da-HB0"/>
                             <constraint firstItem="ncn-Gb-FuV" firstAttribute="leading" secondItem="7St-ZQ-Cwx" secondAttribute="leading" id="BAA-9l-rxR"/>
+                            <constraint firstItem="Ckq-NR-gpI" firstAttribute="top" secondItem="ncn-Gb-FuV" secondAttribute="bottom" constant="41" id="DpA-EE-ae9"/>
                             <constraint firstItem="i5l-3i-05K" firstAttribute="leading" secondItem="ncn-Gb-FuV" secondAttribute="trailing" constant="67" id="E82-bs-PH1"/>
                             <constraint firstItem="6NP-Zl-boj" firstAttribute="centerY" secondItem="gi9-GO-8yB" secondAttribute="centerY" id="PGd-Uw-Xal"/>
+                            <constraint firstItem="Ckq-NR-gpI" firstAttribute="leading" secondItem="ncn-Gb-FuV" secondAttribute="leading" id="PTu-EQ-H7z"/>
                             <constraint firstItem="OtB-Uh-oDd" firstAttribute="leading" secondItem="gi9-GO-8yB" secondAttribute="leading" id="Tk8-KE-BGg"/>
                             <constraint firstItem="i5l-3i-05K" firstAttribute="centerY" secondItem="ncn-Gb-FuV" secondAttribute="centerY" id="anA-Df-sjX"/>
                             <constraint firstItem="Vip-Zx-c6j" firstAttribute="trailing" secondItem="gi9-GO-8yB" secondAttribute="trailing" constant="57" id="duf-os-Cpb"/>
                             <constraint firstItem="6NP-Zl-boj" firstAttribute="leading" secondItem="Vip-Zx-c6j" secondAttribute="leading" constant="30" id="rIg-lY-iVx"/>
+                            <constraint firstItem="Uo0-0e-giE" firstAttribute="leading" secondItem="Ckq-NR-gpI" secondAttribute="trailing" constant="82" id="rnM-Hi-JCm"/>
                             <constraint firstItem="7St-ZQ-Cwx" firstAttribute="leading" secondItem="6NP-Zl-boj" secondAttribute="leading" id="v1r-qc-cbG"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="VC3" id="ffw-4i-nMP"/>
                     <connections>
                         <outlet property="sampleActivityIndicator" destination="i5l-3i-05K" id="Zka-pB-YsL"/>
+                        <outlet property="sampleStepper" destination="Uo0-0e-giE" id="UTb-z8-bPB"/>
                         <outlet property="slider" destination="gi9-GO-8yB" id="zFR-cZ-EEo"/>
                         <outlet property="sliderLabel" destination="6NP-Zl-boj" id="jL8-yN-Iaz"/>
                         <outlet property="stateSwitch" destination="OtB-Uh-oDd" id="Lht-xh-fzf"/>
+                        <outlet property="stepperLabel" destination="Ckq-NR-gpI" id="4ZS-5D-WhF"/>
                         <outlet property="switchLabel" destination="7St-ZQ-Cwx" id="xWW-Aq-hmz"/>
                     </connections>
                 </viewController>

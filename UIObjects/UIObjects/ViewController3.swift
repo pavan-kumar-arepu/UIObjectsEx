@@ -20,14 +20,16 @@ class ViewController3: UIViewController {
     @IBOutlet weak var stateSwitch: UISwitch!
     @IBOutlet weak var switchLabel: UILabel!
     
+    @IBOutlet weak var stepperLabel: UILabel!
+    @IBOutlet weak var sampleStepper: UIStepper!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Switch
         stateSwitch.addTarget(self, action: #selector(stateChanged), for: .valueChanged)
 
-        
-        
+
         // Do any additional setup after loading the view.
     }
     
@@ -45,6 +47,13 @@ class ViewController3: UIViewController {
        }
   
    }
+    
+    
+    @IBAction func stepperValueChanged(_ sender: Any) {
+        print("Stepper")
+        stepperLabel.text = "Stepper: \(sampleStepper.value)"
+    }
+    
     
     /*
     // MARK: - Navigation
