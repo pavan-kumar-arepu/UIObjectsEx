@@ -10,4 +10,5 @@ import Foundation
 // Session 17 --> Activity Indicator
 // Session 17 --> Stepper
 // Session 17 --> TableView
-// Session 18 --> TableView, indetail
+// Session 18 --> TableView indetail
+// Session 19 --> CollectionView in-details
