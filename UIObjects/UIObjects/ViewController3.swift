@@ -28,8 +28,7 @@ class ViewController3: UIViewController {
 
         // Switch
         stateSwitch.addTarget(self, action: #selector(stateChanged), for: .valueChanged)
-
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -54,6 +53,29 @@ class ViewController3: UIViewController {
         stepperLabel.text = "Stepper: \(sampleStepper.value)"
     }
     
+    @IBAction func showAlertView(_ sender: Any) {
+        let alertController = UIAlertController(title: "Alert",
+                                                      message: "Alert Message",
+                                                      preferredStyle: .actionSheet)
+
+        let readButton = UIAlertAction(title: "Read", style: .default) { _ in
+            print("Tapped OK Button")
+        }
+            
+        let writeButton = UIAlertAction(title: "Write", style: .default, handler: { _ in
+            print("Tapped Cancel Button")
+        })
+        
+        let executeButton = UIAlertAction(title: "Execute", style: .default, handler: { _ in
+            print("Tapped Cancel Button")
+        })
+        
+        alertController.addAction(readButton)
+        alertController.addAction(writeButton)
+        alertController.addAction(executeButton)
+
+        self.present(alertController, animated: true, completion: nil)
+    }
     
     /*
     // MARK: - Navigation

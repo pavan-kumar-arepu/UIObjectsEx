@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import WebKit
 
-class ViewController1: UIViewController {
+class ViewController1: UIViewController, WKNavigationDelegate {
 
+    @IBOutlet weak var webkitView: WKWebView!
+    
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
     @IBOutlet weak var testLabel: UILabel!
@@ -17,6 +20,11 @@ class ViewController1: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        webkitView.navigationDelegate = self
+        
+        let url = URL(string: "https://www.apple.com")!
+        
+        webkitView.load(URLRequest(url: url))
         
         segmentControl.addTarget(self, action: #selector(segmentedValueChanged), for: .valueChanged)
         segmentControl.selectedSegmentIndex = 2
@@ -50,5 +58,7 @@ class ViewController1: UIViewController {
 // MARK: - UIObjects
 
 extension ViewController1 {
-    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        title = "Apple Website"
+        }
 }
