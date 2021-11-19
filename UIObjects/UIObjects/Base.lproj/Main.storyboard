@@ -183,31 +183,31 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7St-ZQ-Cwx">
-                                <rect key="frame" x="30" y="309" width="52" height="21"/>
+                                <rect key="frame" x="30" y="189" width="52" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OtB-Uh-oDd">
-                                <rect key="frame" x="147" y="304" width="51" height="31"/>
+                                <rect key="frame" x="147" y="184" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ActivityIndicator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncn-Gb-FuV">
-                                <rect key="frame" x="30" y="402" width="124" height="21"/>
+                                <rect key="frame" x="30" y="460" width="124" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="i5l-3i-05K">
-                                <rect key="frame" x="221" y="394" width="37" height="37"/>
+                                <rect key="frame" x="221" y="452" width="37" height="37"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stepper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ckq-NR-gpI">
-                                <rect key="frame" x="30" y="464" width="61" height="21"/>
+                                <rect key="frame" x="30" y="491" width="61" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Uo0-0e-giE">
-                                <rect key="frame" x="173" y="458.5" width="94" height="32"/>
+                                <rect key="frame" x="173" y="485.5" width="94" height="32"/>
                                 <connections>
                                     <action selector="stepperValueChanged:" destination="0Yl-MD-X9U" eventType="valueChanged" id="JnT-D2-KUm"/>
                                 </connections>
@@ -221,34 +221,60 @@
                                     <action selector="showAlertView:" destination="0Yl-MD-X9U" eventType="touchUpInside" id="Hlg-0o-MGv"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2H4-Uc-Crl">
+                                <rect key="frame" x="0.0" y="559" width="414" height="254"/>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sOY-91-8UD">
+                                <rect key="frame" x="18" y="242" width="376" height="193"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="DkF-i1-N31">
+                                        <rect key="frame" x="0.0" y="28" width="376" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DkF-i1-N31" id="gN6-Vg-vAM">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vip-Zx-c6j"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>
-                            <constraint firstItem="OtB-Uh-oDd" firstAttribute="top" secondItem="gi9-GO-8yB" secondAttribute="bottom" constant="130" id="2Ta-vi-CNY"/>
+                            <constraint firstItem="OtB-Uh-oDd" firstAttribute="top" secondItem="gi9-GO-8yB" secondAttribute="bottom" constant="10" id="2Ta-vi-CNY"/>
                             <constraint firstItem="Uo0-0e-giE" firstAttribute="centerY" secondItem="Ckq-NR-gpI" secondAttribute="centerY" id="38j-hr-GBE"/>
-                            <constraint firstItem="ncn-Gb-FuV" firstAttribute="top" secondItem="7St-ZQ-Cwx" secondAttribute="bottom" constant="72" id="6oO-RP-DuE"/>
+                            <constraint firstItem="Vip-Zx-c6j" firstAttribute="trailing" secondItem="2H4-Uc-Crl" secondAttribute="trailing" id="4aw-5n-aF5"/>
+                            <constraint firstItem="ncn-Gb-FuV" firstAttribute="top" secondItem="7St-ZQ-Cwx" secondAttribute="bottom" constant="250" id="6oO-RP-DuE"/>
                             <constraint firstItem="gi9-GO-8yB" firstAttribute="leading" secondItem="6NP-Zl-boj" secondAttribute="trailing" constant="73" id="7b2-XH-Fup"/>
                             <constraint firstItem="OtB-Uh-oDd" firstAttribute="leading" secondItem="7St-ZQ-Cwx" secondAttribute="trailing" constant="65" id="7ds-DG-lQV"/>
                             <constraint firstItem="gi9-GO-8yB" firstAttribute="top" secondItem="Vip-Zx-c6j" secondAttribute="top" constant="100" id="AMn-3v-ZiH"/>
                             <constraint firstItem="7St-ZQ-Cwx" firstAttribute="centerY" secondItem="OtB-Uh-oDd" secondAttribute="centerY" id="AQd-da-HB0"/>
                             <constraint firstItem="ncn-Gb-FuV" firstAttribute="leading" secondItem="7St-ZQ-Cwx" secondAttribute="leading" id="BAA-9l-rxR"/>
-                            <constraint firstItem="Ckq-NR-gpI" firstAttribute="top" secondItem="ncn-Gb-FuV" secondAttribute="bottom" constant="41" id="DpA-EE-ae9"/>
+                            <constraint firstItem="Ckq-NR-gpI" firstAttribute="top" secondItem="ncn-Gb-FuV" secondAttribute="bottom" constant="10" id="DpA-EE-ae9"/>
+                            <constraint firstItem="i5l-3i-05K" firstAttribute="top" secondItem="sOY-91-8UD" secondAttribute="bottom" constant="17" id="Dzg-Dj-af3"/>
                             <constraint firstItem="i5l-3i-05K" firstAttribute="leading" secondItem="ncn-Gb-FuV" secondAttribute="trailing" constant="67" id="E82-bs-PH1"/>
                             <constraint firstItem="6NP-Zl-boj" firstAttribute="centerY" secondItem="gi9-GO-8yB" secondAttribute="centerY" id="PGd-Uw-Xal"/>
                             <constraint firstItem="Ckq-NR-gpI" firstAttribute="leading" secondItem="ncn-Gb-FuV" secondAttribute="leading" id="PTu-EQ-H7z"/>
                             <constraint firstItem="9Hy-D4-MoX" firstAttribute="top" secondItem="Vip-Zx-c6j" secondAttribute="top" constant="44" id="PZL-b6-VIK"/>
                             <constraint firstItem="OtB-Uh-oDd" firstAttribute="leading" secondItem="gi9-GO-8yB" secondAttribute="leading" id="Tk8-KE-BGg"/>
+                            <constraint firstItem="2H4-Uc-Crl" firstAttribute="leading" secondItem="Vip-Zx-c6j" secondAttribute="leading" id="YKo-cs-LrN"/>
                             <constraint firstItem="i5l-3i-05K" firstAttribute="centerY" secondItem="ncn-Gb-FuV" secondAttribute="centerY" id="anA-Df-sjX"/>
                             <constraint firstItem="Vip-Zx-c6j" firstAttribute="trailing" secondItem="gi9-GO-8yB" secondAttribute="trailing" constant="57" id="duf-os-Cpb"/>
+                            <constraint firstItem="Vip-Zx-c6j" firstAttribute="trailing" secondItem="sOY-91-8UD" secondAttribute="trailing" constant="20" id="f6p-hq-Als"/>
                             <constraint firstItem="9Hy-D4-MoX" firstAttribute="centerX" secondItem="Vip-Zx-c6j" secondAttribute="centerX" id="faH-ZR-dEF"/>
+                            <constraint firstItem="sOY-91-8UD" firstAttribute="top" secondItem="OtB-Uh-oDd" secondAttribute="bottom" constant="27" id="fbS-PT-64X"/>
+                            <constraint firstItem="2H4-Uc-Crl" firstAttribute="top" secondItem="Uo0-0e-giE" secondAttribute="bottom" constant="41.5" id="hQO-yN-JN7"/>
                             <constraint firstItem="6NP-Zl-boj" firstAttribute="leading" secondItem="Vip-Zx-c6j" secondAttribute="leading" constant="30" id="rIg-lY-iVx"/>
                             <constraint firstItem="Uo0-0e-giE" firstAttribute="leading" secondItem="Ckq-NR-gpI" secondAttribute="trailing" constant="82" id="rnM-Hi-JCm"/>
                             <constraint firstItem="7St-ZQ-Cwx" firstAttribute="leading" secondItem="6NP-Zl-boj" secondAttribute="leading" id="v1r-qc-cbG"/>
+                            <constraint firstItem="Vip-Zx-c6j" firstAttribute="bottom" secondItem="2H4-Uc-Crl" secondAttribute="bottom" id="yNa-fX-b0N"/>
+                            <constraint firstItem="sOY-91-8UD" firstAttribute="leading" secondItem="Vip-Zx-c6j" secondAttribute="leading" constant="18" id="yXI-Ui-PWr"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="VC3" id="ffw-4i-nMP"/>
                     <connections>
+                        <outlet property="mapKit" destination="2H4-Uc-Crl" id="gzR-j7-SQA"/>
                         <outlet property="sampleActivityIndicator" destination="i5l-3i-05K" id="Zka-pB-YsL"/>
                         <outlet property="sampleStepper" destination="Uo0-0e-giE" id="UTb-z8-bPB"/>
                         <outlet property="slider" destination="gi9-GO-8yB" id="zFR-cZ-EEo"/>
@@ -256,11 +282,12 @@
                         <outlet property="stateSwitch" destination="OtB-Uh-oDd" id="Lht-xh-fzf"/>
                         <outlet property="stepperLabel" destination="Ckq-NR-gpI" id="4ZS-5D-WhF"/>
                         <outlet property="switchLabel" destination="7St-ZQ-Cwx" id="xWW-Aq-hmz"/>
+                        <outlet property="tableView" destination="sOY-91-8UD" id="wiZ-av-p6e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvc-EV-fDy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1293" y="909"/>
+            <point key="canvasLocation" x="1292.753623188406" y="908.70535714285711"/>
         </scene>
         <!--VC4-->
         <scene sceneID="XUe-x7-sgA">

@@ -8,9 +8,13 @@
 // Session 16: UISwtich, UISlider, UITextView, UIImageView
 
 import UIKit
+import MapKit
 
-class ViewController3: UIViewController {
+class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+
+    @IBOutlet weak var tableView: UITableView!
+    
     // Slider
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var sliderLabel: UILabel!
@@ -23,12 +27,42 @@ class ViewController3: UIViewController {
     @IBOutlet weak var stepperLabel: UILabel!
     @IBOutlet weak var sampleStepper: UIStepper!
     
+    @IBOutlet weak var mapKit: MKMapView!
+    
+    let location1 = [16.200006, 81.144720]
+    let location2 = [40.749188,74.250253]
+    let location3 = [53.348149, 2.865383]
+    let location4 = [ 54.589688, 5.939337]
+    
+    var tableData: [[Double]]?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableData = [location1, location2, location3, location4]
 
         // Switch
         stateSwitch.addTarget(self, action: #selector(stateChanged), for: .valueChanged)
         
+        let location = CLLocationCoordinate2D(latitude: 51.50007773,
+                longitude: -0.1246402)
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: location, span: span)
+        mapKit.setRegion(region, animated: true)
+        
+        let annotation = MKPointAnnotation()
+           annotation.coordinate = location
+           annotation.title = "Big Ben"
+           annotation.subtitle = "London"
+        mapKit.addAnnotation(annotation)
+
+
         // Do any additional setup after loading the view.
     }
     
@@ -86,5 +120,82 @@ class ViewController3: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        self.tableData?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
+                                                 for: indexPath)
+        // Data loading cell from Array
+        cell.textLabel?.text = "\(indexPath.row)"
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == 0 {
+            let location = CLLocationCoordinate2D(latitude: location1[0],
+                    longitude: location1[1])
+            
+            let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+            let region = MKCoordinateRegion(center: location, span: span)
+            mapKit.setRegion(region, animated: true)
+            
+            let annotation = MKPointAnnotation()
+               annotation.coordinate = location
+               annotation.title = "Big Ben"
+               annotation.subtitle = "London"
+            mapKit.addAnnotation(annotation)
+        }
+        
+        if indexPath.row == 1 {
+            let location = CLLocationCoordinate2D(latitude: location2[0],
+                    longitude: location2[1])
+            
+            let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+            let region = MKCoordinateRegion(center: location, span: span)
+            mapKit.setRegion(region, animated: true)
+            
+            let annotation = MKPointAnnotation()
+               annotation.coordinate = location
+               annotation.title = "Big Ben"
+               annotation.subtitle = "London"
+            mapKit.addAnnotation(annotation)
+        }
+        
+        if indexPath.row == 2 {
+            let location = CLLocationCoordinate2D(latitude: 51.50007773,
+                    longitude: -0.1246402)
+            
+            let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+            let region = MKCoordinateRegion(center: location, span: span)
+            mapKit.setRegion(region, animated: true)
+            
+            let annotation = MKPointAnnotation()
+               annotation.coordinate = location
+               annotation.title = "Big Ben"
+               annotation.subtitle = "London"
+            mapKit.addAnnotation(annotation)
+        }
+        
+        if indexPath.row == 3 {
+            let location = CLLocationCoordinate2D(latitude: 51.50007773,
+                    longitude: -0.1246402)
+            
+            let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+            let region = MKCoordinateRegion(center: location, span: span)
+            mapKit.setRegion(region, animated: true)
+            
+            let annotation = MKPointAnnotation()
+               annotation.coordinate = location
+               annotation.title = "Big Ben"
+               annotation.subtitle = "London"
+            mapKit.addAnnotation(annotation)
+        }
+                
+
+    }
 
 }
