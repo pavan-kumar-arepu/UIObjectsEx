@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController4: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+   
+    @IBOutlet weak var datePickerView: UIDatePicker!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -98,5 +100,18 @@ extension ViewController4 : UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.backgroundColor = UIColor.cyan
+    }
+}
+
+extension ViewController4 {
+    
+    @IBAction func dateSelection(_ sender: Any) {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        
+        let strDate = dateFormatter.string(from: datePickerView.date)
+        self.title = strDate
     }
 }
