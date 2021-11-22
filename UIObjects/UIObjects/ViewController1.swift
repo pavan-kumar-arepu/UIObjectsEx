@@ -10,17 +10,25 @@ import WebKit
 
 class ViewController1: UIViewController, WKNavigationDelegate {
 
+    @IBOutlet weak var yearSelectionPickerView: UIPickerView!
+    
     @IBOutlet weak var webkitView: WKWebView!
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var firstTextField: UITextField!
+    let years: [String] = ["2000", "2001", "2002", "2003", "2004", "2005", "2006"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         webkitView.navigationDelegate = self
+        
+        // PickerView
+        
+        yearSelectionPickerView.delegate = self
+        yearSelectionPickerView.dataSource = self
         
         let url = URL(string: "https://www.apple.com")!
         
@@ -58,7 +66,29 @@ class ViewController1: UIViewController, WKNavigationDelegate {
 // MARK: - UIObjects
 
 extension ViewController1 {
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         title = "Apple Website"
-        }
+    }
+}
+
+// MARK - PickerView Delegate and Datasource
+
+extension ViewController1 : UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        years.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        years[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        testLabel.text = years[row]
+    }
+    
 }

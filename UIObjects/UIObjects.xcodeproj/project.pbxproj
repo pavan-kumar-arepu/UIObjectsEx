@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B36FD1D274BEE5300CCA2E5 /* ViewCollection5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B36FD1C274BEE5300CCA2E5 /* ViewCollection5.swift */; };
 		0B458DC0273EC1AF0040C49C /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B458DBF273EC1AF0040C49C /* Topic.swift */; };
 		0B7783342743486E0006CD82 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7783332743486E0006CD82 /* MyCollectionViewCell.swift */; };
 		0B77E0962742BAA700D83699 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B77E0942742BAA700D83699 /* ViewController4.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B36FD1C274BEE5300CCA2E5 /* ViewCollection5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCollection5.swift; sourceTree = "<group>"; };
 		0B458DBF273EC1AF0040C49C /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		0B7783332743486E0006CD82 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		0B77E0942742BAA700D83699 /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				0BC913C2273A100C00CE995E /* ViewController3.swift */,
 				0B77E0942742BAA700D83699 /* ViewController4.swift */,
 				0B7783332743486E0006CD82 /* MyCollectionViewCell.swift */,
+				0B36FD1C274BEE5300CCA2E5 /* ViewCollection5.swift */,
 				0B458DBF273EC1AF0040C49C /* Topic.swift */,
 				0BC913AF273A091100CE995E /* Main.storyboard */,
 				0BC913B2273A091400CE995E /* Assets.xcassets */,
@@ -156,6 +159,7 @@
 				0B77E0962742BAA700D83699 /* ViewController4.swift in Sources */,
 				0B7783342743486E0006CD82 /* MyCollectionViewCell.swift in Sources */,
 				0B458DC0273EC1AF0040C49C /* Topic.swift in Sources */,
+				0B36FD1D274BEE5300CCA2E5 /* ViewCollection5.swift in Sources */,
 				0BC913AE273A091100CE995E /* ViewController1.swift in Sources */,
 				0BC913C0273A0FD200CE995E /* ViewController2.swift in Sources */,
 				0BC913AA273A091100CE995E /* AppDelegate.swift in Sources */,

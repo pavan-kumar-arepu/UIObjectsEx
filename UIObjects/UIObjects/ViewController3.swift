@@ -32,7 +32,7 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
     let location1 = [16.200006, 81.144720]
     let location2 = [40.749188,74.250253]
     let location3 = [53.348149, 2.865383]
-    let location4 = [ 54.589688, 5.939337]
+    let location4 = [54.589688, 5.939337]
     
     var tableData: [[Double]]?
     
@@ -160,8 +160,8 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
             
             let annotation = MKPointAnnotation()
                annotation.coordinate = location
-               annotation.title = "Big Ben"
-               annotation.subtitle = "London"
+               annotation.title = "Machilipatnam"
+               annotation.subtitle = "India"
             mapKit.addAnnotation(annotation)
         }
         
@@ -175,8 +175,8 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
             
             let annotation = MKPointAnnotation()
                annotation.coordinate = location
-               annotation.title = "Big Ben"
-               annotation.subtitle = "London"
+               annotation.title = "Pillar"
+               annotation.subtitle = "SouthAfica"
             mapKit.addAnnotation(annotation)
         }
         
@@ -190,11 +190,11 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
             
             let annotation = MKPointAnnotation()
                annotation.coordinate = location
-               annotation.title = "Big Ben"
-               annotation.subtitle = "London"
+               annotation.title = "Belfast"
+               annotation.subtitle = "NorthenIreland"
             mapKit.addAnnotation(annotation)
         }
-                
+        
 
     }
 
